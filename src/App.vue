@@ -1,14 +1,27 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { defineComponent } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+import Cookies from "js-cookie";
+
+const logout = () => {
+  window.location.href = `/auth/logout?session_hint=${Cookies.get('session_hint')}`;
+};
+
+defineComponent({
+  name: "App",
+  components: {
+    RouterLink,
+    RouterView
+  }
+});
 </script>
 
 <template>
-  <RouterView />
+  <RouterView/>
   <a href="/auth/login">Login</a>
-  <a href="/auth/logout">Logout</a>
+  <button @click="logout">Logout</button>
   <RouterLink to="/my-account">My Account</RouterLink>
 </template>
-
 <style scoped>
 header {
   line-height: 1.5;
