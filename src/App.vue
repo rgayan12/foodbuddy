@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <RouterView />
-  <RouterLink to="/auth/login">Login</RouterLink>
+  <a href="/auth/login">Login</a>
 </template>
 
 <style scoped>
