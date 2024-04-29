@@ -5,6 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <RouterView />
   <a href="/auth/login">Login</a>
+  <a href="/auth/logout">Logout</a>
   <RouterLink to="/my-account">My Account</RouterLink>
 </template>
 
