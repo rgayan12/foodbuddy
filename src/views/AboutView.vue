@@ -42,7 +42,7 @@ export default defineComponent({
       formData.append('file', file);
       formData.append('userId', localStorage.getItem('userId') || '1');
 
-      fetch('http://food-buddy-web-service-3002185283:8080/recipes/show', {
+      fetch('/choreo-apis/foodbud/food-buddy-web-service/ballerina-rest-api-5c6/v1', {
         method: 'GET',
        // body: formData,
       })
