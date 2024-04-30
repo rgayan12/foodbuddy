@@ -18,9 +18,9 @@ defineComponent({
 
 <template>
   <RouterView/>
-  <a href="/auth/login">Login</a>
+<!--  <a href="/auth/login">Login</a>
   <button @click="logout">Logout</button>
-  <RouterLink to="/my-account">My Account</RouterLink>
+  <RouterLink to="/my-account">My Account</RouterLink>-->
 </template>
 <style scoped>
 header {

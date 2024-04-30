@@ -29,12 +29,11 @@ defineComponent({
               </radialGradient>
             </defs>
           </svg>
-          <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+          <div class="mx-auto max-w-xl text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Bring all your favorite recipes to one place and use AI to plan your meals.
+              Bring all your favorite paper based recipes to one place and use AI to plan your meals.
               </h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Get all family on board when planning
-              meals while adding a little help from AI.</p>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Dont know what to have tonight? Send a text message with what you feel like and get inspired with some dinner ideas</p>
             <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a href="/auth/signin"
                  class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get
@@ -42,11 +41,7 @@ defineComponent({
 
             </div>
           </div>
-          <div class="relative mt-16 h-80 lg:mt-8">
-            <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-                 src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="App screenshot"
-                 width="1824" height="1080">
-          </div>
+
         </div>
       </div>
     </div>
