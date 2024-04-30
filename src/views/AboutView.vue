@@ -44,7 +44,7 @@ export default defineComponent({
 
       fetch('http://food-buddy-web-service-3002185283:8080/recipes/show', {
         method: 'GET',
-        body: formData,
+       // body: formData,
       })
         .then((response) => response.json())
         .then((result) => {
