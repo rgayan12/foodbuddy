@@ -25,4 +25,5 @@ async function isAuthenticated() {
     }
 }
 
+
 export default isAuthenticated;
