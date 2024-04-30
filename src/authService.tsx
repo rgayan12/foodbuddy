@@ -4,7 +4,7 @@ import axios from 'axios';
 const AUTH_CHECK_ENDPOINT = '/auth/userinfo';
 
 // Function to check if the user is authenticated
-async function isAuthenticated() {
+export async function isAuthenticated() {
     try {
         // Send a GET request to the authentication check endpoint
         const response = await axios.get(AUTH_CHECK_ENDPOINT);
@@ -12,6 +12,7 @@ async function isAuthenticated() {
         // Check the response status and return true or false based on the result
         if (response.status === 200) {
             // If the response indicates authentication success, return true
+            localStorage.setItem('userId', response.data.sub);
             return true;
         } else if(response.status === 401) {
             // If the response indicates authentication failure, return false
@@ -24,6 +25,3 @@ async function isAuthenticated() {
         return false;
     }
 }
-
-
-export default isAuthenticated;

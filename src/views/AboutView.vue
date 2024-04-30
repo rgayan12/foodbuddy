@@ -40,9 +40,10 @@ export default defineComponent({
       const formData = new FormData();
 
       formData.append('file', file);
+      formData.append('userId', localStorage.getItem('userId') || '1');
 
-      fetch('http://localhost:5000/upload', {
-        method: 'POST',
+      fetch('http://food-buddy-web-service-3002185283:8080/recipes/show', {
+        method: 'GET',
         body: formData,
       })
         .then((response) => response.json())

@@ -1,8 +1,22 @@
 <script setup lang="ts">
-import {defineComponent} from 'vue';
+import {defineComponent, ref, onMounted} from 'vue';
+import {isAuthenticated} from "@/authService";
 
 defineComponent({
   name: 'HomeView',
+
+  setup() {
+
+    const userId = ref()
+
+    onMounted(async () => {
+      userId.value = await isAuthenticated()
+    })
+
+
+
+  }
+
 });
 </script>
 <template>
@@ -32,16 +46,15 @@ defineComponent({
           <div class="mx-auto max-w-xl text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Bring all your favorite paper based recipes to one place and use AI to plan your meals.
-              </h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Dont know what to have tonight? Send a text message with what you feel like and get inspired with some dinner ideas</p>
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Dont know what to have tonight? Send a text message with
+              what you feel like and get inspired with some dinner ideas</p>
             <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a href="/auth/login"
                  class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get
                 started with Google</a>
-
             </div>
           </div>
-
         </div>
       </div>
     </div>
