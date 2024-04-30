@@ -32,9 +32,9 @@ router.beforeEach(async (to, from, next) => {
         // Call the isAuthenticated function to check if the user is authenticated
         const authenticated = await isAuthenticated();
         if (to.meta.requiresAuth && !authenticated) {
-            next({name: '/auth/login'});
+            window.location.href = '/auth/login';
         } else if (to.name === 'home' && authenticated) {
-            next({name: '/my-account'});
+            next({path: '/my-account'});
         } else {
             next();
         }
